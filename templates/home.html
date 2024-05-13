@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        
+        .header {
+            background-color: #483363;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 100%; /* Ensure maximum width does not exceed viewport */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+        
+        .welcome-text {
+            width: 40%;
+            margin-top: 200px;
+            font-size: 2em;
+            color: #0B1A19;
+        }
+        
+        .image-container {
+            width: 60%;
+            text-align: right;
+            max-width: 100%; /* Ensure maximum width does not exceed viewport */
+            overflow: hidden; /* Hide any overflow */
+        }
+        
+        .main-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .start-button {
+            position: absolute;
+            top: 90%; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 100%; /* Ensure button does not exceed the viewport */
+        }
+        
+        .start-button button {
+            background: linear-gradient(90deg, #A187C3 0%, #8255BC 100%);  /* Button color */
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }         
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='mujz.jpg') }}" alt="MUJZ Logo" class="logo">
+        <nav class="navigation">
+            <a href="{{ url_for('signin') }}" class="signin">Sign In</a>
+        </nav>
+    </header>
+  
+    <main class="main-content">
+        <section class="welcome-text">
+            AI WEBSITE SUMMARIZES AND GENERATES QUESTIONS WITH CHATBOT
+        </section>
+        <section class="image-container">
+            <img src="{{ url_for('static', filename='photo.jpg') }}" alt="Photo" class="main-image">
+        </section>
+    </main>
+  
+    <div class="start-button">
+        <button onclick="location.href='{{ url_for('signup') }}'">START NOW</button>
+    </div>
+  </body>
+  </html>

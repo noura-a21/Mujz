@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:white /* Adjust the color to match the design */
+}
+
+.box {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 900px;
+}
+
+.button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px; /* Circular edges */
+}
+
+.button:hover {
+    background-color: #8255BC; /* Darker shade on hover */
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 90vh; 
+    margin-top: 15px; 
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="file"], input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    padding: 10px;
+    width: 95%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 0.5em 2em;
+    background: linear-gradient(90deg, #A187C3 0%, #8255BC 100%);  /* Button color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background:  #8255BC;
+}
+
+a {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
